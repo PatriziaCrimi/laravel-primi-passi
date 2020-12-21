@@ -17,6 +17,10 @@ h2 {
   font-weight: $title_weight;
 }
 
+h5 {
+  display: inline;
+}
+
 p {
   padding: $padding_unit 0;
 }
@@ -32,6 +36,13 @@ p {
 }
 
 .row {
+  width: $full_width;
+}
+
+#page-wrapper {
+  background-color: black;
+  height: $full_height;
+  min-height: 100vh;
   width: $full_width;
 }
 

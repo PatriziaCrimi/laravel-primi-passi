@@ -1,7 +1,3 @@
-<?php
-$user = 'Patrizia';
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,35 +12,81 @@ $user = 'Patrizia';
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="container-fluid">
-          <div class="row">
-            <div id="nav-left">
-              <p>Prova nav left</p>
+    <div id="page-wrapper">
+      {{-- Header --}}
+      <header>
+        {{-- Navbar --}}
+        <nav>
+          <div class="container-fluid">
+            <div class="row">
+              <div id="nav-left">
+                <img src="../img/laravel_logo.png" alt="Laravel logo">
+              </div>
+              <div id="nav-right">
+                <h2>Hello {{ $user_name }}!</h2>
+              </div>
             </div>
-            <div id="nav-right">
-              <p>Prova nav right</p>
+          </div>
+        </nav>
+        {{-- Jumbotron --}}
+        <div id="jumbotron">
+          <div class="container">
+            <div class="row">
+              <h1>Laravel</h1>
+              <img src="../img/laravel_7.png" alt="Laravel 7">
             </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <main>
-      <div class="container">
-        <div class="row">
-          <h1>Laravel</h1>
-          <h2>Hello {{ $user }}!</h2>
-          <p>Prova Main</p>
+      </header>
+      {{-- Main --}}
+      <main>
+        <div class="container">
+          {{-- Section "Else-If" --}}
+          <section id="if-else">
+            <div class="row">
+              @if (count($users_list) > $max_num)
+                <div class="if-else-box">
+                  <h3>The users' list has more than {{$max_num}} users.</h3>
+                  <p>It has {{count($users_list)}} users.</p>
+                </div>
+              @elseif (count($users_list) === $max_num)
+                <div class="if-else-box">
+                  <h3>The users' list has precisely {{$max_num}} users.</h3>
+                </div>
+              @else
+                <div class="if-else-box">
+                  <h3>The users' list has less than {{$max_num}} users.</h3>
+                  <p>It has {{count($users_list)}} users.</p>
+                </div>
+              @endif
+            </div>
+          </section>
+          {{-- Section "Forelse" --}}
+          <section id="forelse-loop">
+            <div class="row">
+              <h4>Users' list</h4>
+              @forelse ($users_list as $user)
+                <h5> {{$user}} </h5>
+                @if ($loop->last)
+                  <span>.</span>
+                @else
+                  <span>-</span>
+                @endif
+              @empty
+                <p>The users' list is empty.</p>
+              @endforelse
+            </div>
+          </section>
+        </div>  {{-- Closing Main container --}}
+      </main>
+      {{-- Footer --}}
+      <footer>
+        <div class="container">
+          <div class="row">
+            <small>Credits</small>
+          </div>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <p>Prova footer</p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>  {{-- Closing page-wrapper --}}
   </body>
 </html>
