@@ -1,0 +1,30 @@
+// ---------------------------  Variables ----------------------------
+
+// Font
+$font_family: 'Roboto', sans-serif;  // 100;300;400;500;700;900
+$font-size: 14px;
+$title_size: $font-size * 2;
+$font_weight: 400;
+$title_weight: $font_weight * 2;
+$font_awesome: 'Font Awesome 5 Free';
+
+// Colors
+$primary_color: black;
+$secondary_color: green;
+$primary_bg_color: lightcoral;
+$secondary_bg_color: lightgrey;
+$third_bg_color: grey;
+$hover_color: blue;
+$hover_bg_color: lightblue;
+
+// Dimensions
+$full_width: 100%;
+$full_height: 100%;
+$height_nav: 80px;
+
+// Margins & Padding
+$padding_unit: 20px;
+$margin_unit: 10px;
+
+// Transition times
+$hover_time: 0.25s;

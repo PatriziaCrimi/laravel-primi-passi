@@ -1,0 +1,30 @@
+header nav {
+  width: $full_width;
+  height: $height_nav;
+  background-color: $primary_bg_color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0px 0.5px 4px 0px rgba(0, 0, 0, 0.3);
+
+  #nav-left {
+    height: $full_height;
+    @include display-flex;
+    align-items: center;
+  }
+
+  #nav-right {
+    height: $full_height;
+    @include display-flex;
+    align-items: center;
+    }
+  }
+}
+
+nav .row {
+  height: $full_height;
+  @include display-flex;
+  justify-content: space-between;
+  align-items: center;
+}
