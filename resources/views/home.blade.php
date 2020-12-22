@@ -19,23 +19,27 @@
         <nav>
           <div class="container-fluid">
             <div class="row">
-              <div id="nav-left">
-                <img src="../img/laravel_logo.png" alt="Laravel logo">
+              <div id="nav-logo">
+                <img src=" {{asset('img/laravel_logo.png')}}" alt="Laravel logo">
               </div>
               <div id="nav-right">
                 <h2>Hello {{ $user_name }}!</h2>
               </div>
             </div>
-          </div>
+          </div>  {{-- Closing Navbar container --}}
         </nav>
         {{-- Jumbotron --}}
         <div id="jumbotron">
           <div class="container">
             <div class="row">
               <h1>Laravel</h1>
-              <img src="../img/laravel_7.png" alt="Laravel 7">
             </div>
-          </div>
+            <div class="row">
+              <div class="jumbo-img">
+                <img src=" {{asset('img/laravel_7.png')}}" alt="Laravel 7">
+              </div>
+            </div>
+          </div>  {{-- Closing Jumbotron container --}}
         </div>
       </header>
       {{-- Main --}}
@@ -83,7 +87,10 @@
       <footer>
         <div class="container">
           <div class="row">
-            <small>Credits</small>
+            <small>
+              Powered by:
+              <span>Patrizia Crimi</span>
+            </small>
           </div>
         </div>
       </footer>

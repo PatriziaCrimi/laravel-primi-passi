@@ -10,10 +10,16 @@ header {
     z-index: 1;
     box-shadow: 0px 0.5px 4px 0px rgba(0, 0, 0, 0.3);
 
-    #nav-left {
+    #nav-logo {
       height: $full_height;
       @include display-flex;
       align-items: center;
+      padding: $padding_unit / 2 0;
+
+      img {
+        height: $full_height;
+        border-radius: 10px;
+      }
     }
 
     #nav-right {
@@ -24,7 +30,19 @@ header {
   }
 
   #jumbotron {
-    padding-top: $height_nav;
+    padding-top: $height_nav + $padding_unit;
+    padding-bottom: $padding_unit;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(189,189,189,1) 50%, rgba(1,223,165,1) 100%);
+
+    .jumbo-img {
+      width: $full_width / 3;
+
+      img {
+        width: $full_width;
+        border-radius: 50%;
+      }
+    }
   }
 }
 

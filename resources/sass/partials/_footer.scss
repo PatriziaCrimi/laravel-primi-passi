@@ -1,3 +1,13 @@
 footer {
   background-color: $third_bg_color;
+  color: $secondary_color;
+  text-align: center;
+  padding: $padding_unit 0;
+
+  small {
+
+    span {
+      color: #fff;
+    }
+  }
 }

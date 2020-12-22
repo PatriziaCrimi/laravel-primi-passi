@@ -1,18 +1,16 @@
 body {
   font-family: $font_family;  // 100;300;400;500;700;900
-  color: $primary_color;
   font-size: $font-size;
   font-weight: $font_weight;
+  color: $primary_color;
 }
 
 h1 {
-  color: $secondary_color;
   font-size: $title_size - 4px;
   font-weight: $title_weight;
 }
 
 h2 {
-  color: $secondary_color;
   font-size: $title_size;
   font-weight: $title_weight;
 }
@@ -40,9 +38,7 @@ p {
 }
 
 #page-wrapper {
-  background-color: black;
   height: $full_height;
-  min-height: 100vh;
   width: $full_width;
 }
 
