@@ -1,10 +1,16 @@
 main {
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(189,189,189,1) 50%, rgba(1,223,165,1) 100%);
+  background: linear-gradient(180deg, $gradient_primary 0%, $gradient_secondary 50%, $gradient_third 100%);
   text-align: center;
   padding: $padding_unit * 3 0 $padding_unit * 4;
 
   section#if-else {
-
+    i {
+      font-size: $font-size * 5;
+      padding-bottom: $padding_unit * 2;
+      color: $primary_bg_color;
+      opacity: 0.8;
+      text-shadow: 1.5px 1.5px 2px $primary_color;
+    }
   }
 
   section#forelse-loop {

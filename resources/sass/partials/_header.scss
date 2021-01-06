@@ -16,9 +16,14 @@ header {
       align-items: center;
       padding: $padding_unit / 2 0;
 
-      img {
+      a {
+        display: block;
         height: $full_height;
-        border-radius: 10px;
+
+        img {
+          height: $full_height;
+          border-radius: 10px;
+        }
       }
     }
 
@@ -33,14 +38,28 @@ header {
     padding-top: $height_nav + $padding_unit;
     padding-bottom: $padding_unit;
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(189,189,189,1) 50%, rgba(1,223,165,1) 100%);
+    background: linear-gradient(0deg, $gradient_primary 0%, $gradient_secondary 50%, $gradient_third 100%);
 
-    .jumbo-img {
-      width: $full_width / 3;
+    .jumbo-info {
+      width: 100%;
 
-      img {
-        width: $full_width;
-        border-radius: 50%;
+      .jumbo-img {
+        width: $width_unit * 3;
+        margin: 0 auto $margin_unit * 4;
+
+        a {
+          display: block;
+          width: $full_width;
+
+          img {
+            width: $full_width;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .jumbo-box {
+        padding-left: $padding_unit * 3;
       }
     }
   }
@@ -51,4 +70,23 @@ nav .row {
   @include display-flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* ------------------- MEDIA QUERY ------------------- */
+
+/* Breakpoint Medium 768px md */
+@media screen and (min-width: 768px) {
+
+  header #jumbotron {
+    .jumbo-info {
+      @include display-flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .jumbo-img {
+        width: $width_unit * 8;
+        margin: 0;
+      }
+    }
+  }
 }

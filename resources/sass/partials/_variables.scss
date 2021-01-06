@@ -16,11 +16,15 @@ $secondary_bg_color: #BDBDBD;
 $third_bg_color: #1C1C1C;
 $hover_color: blue;
 $hover_bg_color: lightblue;
+$gradient_primary: rgba(255,255,255,1);
+$gradient_secondary: rgba(189,189,189,1);
+$gradient_third: rgba(1,223,165,1);
 
 // Dimensions
 $full_width: 100%;
 $full_height: 100%;
 $height_nav: 80px;
+$width_unit: 100px;
 
 // Margins & Padding
 $padding_unit: 20px;

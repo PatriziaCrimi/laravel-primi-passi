@@ -395,6 +395,8 @@ body {
 h1 {
   font-size: 24px;
   font-weight: 800;
+  padding: 20px 0;
+  text-transform: capitalize;
 }
 
 h2 {
@@ -402,12 +404,28 @@ h2 {
   font-weight: 800;
 }
 
+h3 {
+  font-size: 23.3333333333px;
+  font-weight: 700;
+}
+
+h4,
 h5 {
+  font-size: 18.6666666667px;
+}
+
+h5 {
+  padding: 20px 0;
+}
+
+h6 {
+  font-size: 14px;
   display: inline;
 }
 
 p {
   padding: 20px 0;
+  font-size: 16.8px;
 }
 
 .container,
@@ -427,6 +445,7 @@ p {
 #page-wrapper {
   height: 100%;
   width: 100%;
+  min-height: 100vh;
 }
 
 /* ------------------- MEDIA QUERY ------------------- */
@@ -482,7 +501,12 @@ header nav #nav-logo {
   padding: 10px 0;
 }
 
-header nav #nav-logo img {
+header nav #nav-logo a {
+  display: block;
+  height: 100%;
+}
+
+header nav #nav-logo a img {
   height: 100%;
   border-radius: 10px;
 }
@@ -500,13 +524,27 @@ header #jumbotron {
   background: linear-gradient(0deg, white 0%, #bdbdbd 50%, #01dfa5 100%);
 }
 
-header #jumbotron .jumbo-img {
-  width: 33.3333333333%;
+header #jumbotron .jumbo-info {
+  width: 100%;
 }
 
-header #jumbotron .jumbo-img img {
+header #jumbotron .jumbo-info .jumbo-img {
+  width: 300px;
+  margin: 0 auto 40px;
+}
+
+header #jumbotron .jumbo-info .jumbo-img a {
+  display: block;
+  width: 100%;
+}
+
+header #jumbotron .jumbo-info .jumbo-img a img {
   width: 100%;
   border-radius: 50%;
+}
+
+header #jumbotron .jumbo-info .jumbo-box {
+  padding-left: 60px;
 }
 
 nav .row {
@@ -516,10 +554,35 @@ nav .row {
   align-items: center;
 }
 
+/* ------------------- MEDIA QUERY ------------------- */
+
+/* Breakpoint Medium 768px md */
+
+@media screen and (min-width: 768px) {
+  header #jumbotron .jumbo-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  header #jumbotron .jumbo-info .jumbo-img {
+    width: 800px;
+    margin: 0;
+  }
+}
+
 main {
   background: linear-gradient(180deg, white 0%, #bdbdbd 50%, #01dfa5 100%);
   text-align: center;
   padding: 60px 0 80px;
+}
+
+main section#if-else i {
+  font-size: 70px;
+  padding-bottom: 40px;
+  color: #04B486;
+  opacity: 0.8;
+  text-shadow: 1.5px 1.5px 2px black;
 }
 
 footer {

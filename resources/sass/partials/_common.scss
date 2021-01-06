@@ -8,6 +8,8 @@ body {
 h1 {
   font-size: $title_size - 4px;
   font-weight: $title_weight;
+  padding: $padding_unit 0;
+  text-transform: capitalize;
 }
 
 h2 {
@@ -15,12 +17,27 @@ h2 {
   font-weight: $title_weight;
 }
 
+h3 {
+  font-size: $title_size / 1.2;
+  font-weight: $title_weight - 100;
+}
+
+h4, h5 {
+  font-size: $title_size / 1.5;
+}
+
 h5 {
+  padding: $padding_unit 0;
+}
+
+h6 {
+  font-size: $title_size / 2;
   display: inline;
 }
 
 p {
   padding: $padding_unit 0;
+  font-size: $font-size * 1.2;
 }
 
 .container,
@@ -34,12 +51,13 @@ p {
 }
 
 .row {
-  width: $full_width;
+  width: 100%;
 }
 
 #page-wrapper {
-  height: $full_height;
-  width: $full_width;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
 }
 
 /* ------------------- MEDIA QUERY ------------------- */
